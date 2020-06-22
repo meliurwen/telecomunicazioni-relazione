@@ -1,0 +1,62 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{tocloft}
+\usepackage[italian]{babel}
+
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{wrapfig}
+
+\usepackage{listings}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{enumerate}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{amsmath}
+
+\setcounter{secnumdepth}{6}
+
+\def\code#1{\texttt{#1}}
+
+
+% Indice e citazioni linkate
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+\title{Documento dei Requisiti}
+\author{Mattia Busnelli e Salanti Michele}
+
+\begin{document}
+
+\include{frontespizio}
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\tableofcontents
+
+
+\chapter{Introduzione}
+\input{chapters/01_introduzione}
+
+\chapter{Contesto Applicativo e Motivazioni}
+\input{chapters/02_descrizione_generale}
+
+\chapter{Implementazione}
+\input{chapters/03_requisiti_specifici}
+
+\chapter{Note Finali}
+\input{chapters/04_conclusioni}
+
+\bibliographystyle{unsrt}
+\bibliography{bibliography.bib}
+
+\end{document}
