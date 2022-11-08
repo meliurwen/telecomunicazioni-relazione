@@ -1,0 +1,9 @@
+\onehalfspacing
+
+
+Il team di Salah ha dimostrato che le regole di targeting nella parte inferiore (in basso) di un set di regole relativamente ampio possono essere gravemente dannose per le prestazioni di un firewall. Come buona pratica di progettazione e contromisura vitale contro gli attacchi DoS che prendono di mira le regole in fondo al set, il team consiglia di ridurre al minimo le dimensioni del set di regole del firewall o di riorganizzare dinamicamente le regole in modo che le regole più in basso possano essere spostate nella parte superiore del set di regole, rendendolo così più difficile lanciare attacchi algoritmici di tale complessità che colpiscono le regole inferiori.
+
+Il lavoro del team di Collins, a parere dell'autore di questo testo, sembra in parte inconclusivo su questo fronte, ma mostra chiaramente l'impatto della dimensione del set di regole sulle prestazioni d un firewall ed accenna (o da una breve introduzione) a problematiche nuove introdotte dal paradigma SDN che vengono approfondite da ricerche come quella del team di Shin \cite{shin2013fresco} e dal team di Porras \cite{porras2012security} (in breve: Garbage collection delle regole mandate agli switch ed ottimizzazione e risoluzione di conflitti).
+
+
+Oltretutto, \textbf{\textit{come nota personale}}, l'autore di questo testo si sente di aggiungere che la metodologia \textit{"first deny last allow"} descritta da Collins ed usata anche dal team di Bakker \cite{bakker2016network} può essere una buona tecnica da tenere in mente quando si progettano set di regole di un firequall, indipendentemente che sia SDN-based o meno. Questo, oltre a conferire un ovvio vantaggio sulla mantenibilità da parte degli amministratori di rete, permette anche di garantire prestazioni ottimali dovuto ad un set ridotto di regole.

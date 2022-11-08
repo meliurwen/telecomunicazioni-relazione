@@ -1,0 +1,37 @@
+
+\section{Firewall}
+Un firewall è un dispositivo di rete solitamente interposto tra due reti per filtrare il traffico tra loro secondo una certa politica di sicurezza. Un firewall fornisce protezione eseguendo controlli basati su regole ai pacchetti. I firewall possono essere hardware, software od una combinazione dei due. Un firewall hardware può essere un componente di un dispositivo dedicato od un componente di un router a banda larga:
+\begin{itemize}
+  \item Un \textit{\textbf{firewall hardware}} è in genere implementato sul gateway principale che collega una rete interna protetta e il resto della rete.
+  \item Un \textit{\textbf{firewall software}} è un software in esecuzione su un computer, che protegge il suddetto computer limitandone i tentativi esterni di accesso.
+\end{itemize}
+
+I firewall hardware tendono ad offrire una protezione e delle prestazioni migliori rispetto ai firewall software. Essi possono avere funzioni di filtraggio di pacchetti in modalità stateless a vere e proprie applicazioni stateful:
+\begin{itemize}
+  \item I filtri \textbf{\textit{stateless}} di pacchetti applicano regole di filtro per accettare o rifiutare singoli pacchetti senza esaminare la relazione tra di loro. Il filtraggio dei pacchetti senza stato fornisce un controllo meno efficace ma al contempo mostra prestazioni elevate.
+  \item Le applicazioni \textbf{\textit{stateful}} applicano meccanismi di sicurezza a specifiche applicazioni tenendone traccia dei vari stati. Il controllo specifico di un'applicazione è piuttosto efficace, al costo però di una sensibile degradazione generale delle prestazioni rispetto ad un filtro stateless.
+\end{itemize}
+
+
+\section{Motivazioni}
+
+Nonostante i vantaggi, i firewall hardware presentano tre principali inconvenienti:
+
+\begin{itemize}
+  \item I firewall hardware sono spesso \textit{costosi}.
+  \item I costi di manutenzione e aggiornamento dei firewall hardware sono in genere associati a configurazioni complicate e specifiche del fornitore.
+  \item L'interoperabilità tra i firewall hardware realizzati da diversi fornitori non può sempre essere facilmente raggiunta.
+  \item I guasti sui firewall hardware possono comportare la sostituzione e la riconfigurazione di più unità hardware al fine di garantire una politica coerente su una rete.
+\end{itemize}
+
+Questi inconvenienti potrebbero essere alleviati sostituendo i firewall hardware con alternative flessibili ed a basso costo; il paradigma di rete emergente SDN (Software Defined Networking) è un buon candidato.
+
+I firewall hardware orientati a SDN sono in grado di preservare alte prestazioni sul traffico e consentire un controllo estremamente flessibile sul traffico.
+
+Pertanto, le normative sul traffico possono essere eseguite su un gran numero di switch SDN-oriented senza incorrere in elevati costi di manutenzione.
+
+In questo testo ci baseremo sul prototipo di un firewall hardware SDN-abilitato (con stati) e che fa uso di OpenFlow come protocollo di comunicazione. Ci focalizzeremo dell'impatto che può avere sulle prestazioni il numero di regole applicate su di un firewall e parleremo delle pratiche da adottare (o da evitare) per ridurre il più possibile questo impatto.
+\newline
+\newline
+In sostanza questo lavoro si baserà principalmente sulle ricerche del team di Collings\cite{collings2014openflow} e di Khaled\cite{salah2011performance}.
+
