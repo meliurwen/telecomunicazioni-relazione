@@ -9,6 +9,8 @@ implemented through a Software-defined Network architecture using an OpenFlow
 protocol analyzing the possible advantages and implications that can derive in
 both security and in network management.
 
+* [📝 PDF of the First Essay](https://github.com/meliurwen/telecomunicazioni-relazione/releases/download/final/essay_1_sdn_openflow.pdf)
+
 ## Performances of firewalls built with dedicated appliances: dependency on the number of rules and possible optimizations
 
 Written in Italian, based on the prototype of an SDN-enabled (stateful) hardware
@@ -16,3 +18,5 @@ firewall that uses OpenFlow as a communication protocol. It focuses on the
 impact that the number of rules applied on a firewall can have on performances
 and discuss the possible practices to be adopted or avoided) to mitigate such
 issues.
+
+* [📝 PDF of the Second Essay](https://github.com/meliurwen/telecomunicazioni-relazione/releases/download/final/essay_2_firewall_rules_number.pdf)
